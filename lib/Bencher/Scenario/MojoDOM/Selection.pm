@@ -1,4 +1,4 @@
-package Bencher::Scenario::MojoDOM::Selector;
+package Bencher::Scenario::MojoDOM::Selection;
 
 # DATE
 # VERSION
