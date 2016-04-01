@@ -23,6 +23,7 @@ _
     ],
     datasets => \@Bencher::ScenarioUtil::MojoDOM::datasets,
     include_result_size => 1,
+    extra_modules => \@Bencher::ScenarioUtil::MojoDOM::extra_modules,
 };
 
 1;

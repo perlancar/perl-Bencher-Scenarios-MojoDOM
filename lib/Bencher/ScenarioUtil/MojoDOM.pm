@@ -15,5 +15,11 @@ our @datasets = (
     {name => 'medium1', summary => '20k elements, 7 levels, '.length($htmls{medium1}).' bytes', args=>{size=>'medium1'}},
 );
 
+# we want to record the version of these modules too in the benchmark result
+# metadata
+our @extra_modules = (
+    'PERLANCAR::HTML::Tree::Examples',
+);
+
 1;
 # ABSTRACT: Utility routines
