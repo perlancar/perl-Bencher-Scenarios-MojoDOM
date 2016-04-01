@@ -8,6 +8,7 @@ use strict;
 use warnings;
 
 use Bencher::ScenarioUtil::MojoDOM;
+use PERLANCAR::HTML::Tree::Examples qw(gen_sample_html);
 
 our $scenario = {
     summary => 'Benchmark parsing of HTML',
@@ -16,9 +17,15 @@ our $scenario = {
 Sample documents from `PERLANCAR::HTML::Tree::Examples` are used.
 
 _
+    before_bench => sub {
+        # prepare html
+        %main::htmls = map {
+            ($_->{name} => gen_sample_html(size => $_->{name}))
+        } @Bencher::ScenarioUtil::MojoDOM::datasets;
+    },
     participants => [
         {
-            fcall_template => 'Mojo::DOM->new($Bencher::ScenarioUtil::MojoDOM::htmls{<size>})',
+            fcall_template => 'Mojo::DOM->new($main::htmls{<size>})',
         },
     ],
     datasets => \@Bencher::ScenarioUtil::MojoDOM::datasets,
