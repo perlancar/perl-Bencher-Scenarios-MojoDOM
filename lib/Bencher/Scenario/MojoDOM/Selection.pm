@@ -31,7 +31,7 @@ our $scenario = {
 Sample documents from `PERLANCAR::HTML::Tree::Examples` are used.
 
 _
-    before_bench => sub {
+    before_gen_items => sub {
         # prepare the DOMs
         %main::doms = map {
             ($_->{name} => Mojo::DOM->new(

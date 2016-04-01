@@ -17,7 +17,7 @@ our $scenario = {
 Sample documents from `PERLANCAR::HTML::Tree::Examples` are used.
 
 _
-    before_bench => sub {
+    before_gen_items => sub {
         # prepare html
         %main::htmls = map {
             ($_->{name} => gen_sample_html(size => $_->{name}))

@@ -1,5 +1,13 @@
 Revision history for Bencher-Scenarios-MojoDOM
 
+0.002   2016-04-01 (PERLANCAR)
+
+        - Add scenario: MojoDOM::Selector.
+
+        - Record version of PERLANCAR::HTML::Tree::Examples in benchmark result
+          metadata.
+
+
 0.001   2016-04-01 (PERLANCAR)
 
         - First release.
