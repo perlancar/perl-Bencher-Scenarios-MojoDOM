@@ -9,7 +9,7 @@ use warnings;
 
 use Bencher::ScenarioUtil::MojoDOM;
 use Mojo::DOM;
-use PERLANCAR::HTML::Tree::Examples qw(gen_sample_html);
+use PERLANCAR::HTML::Tree::Examples qw(gen_sample_data);
 
 my @exprs = (
     'h4',
@@ -35,7 +35,7 @@ _
         # prepare the DOMs
         %main::doms = map {
             ($_->{name} => Mojo::DOM->new(
-                gen_sample_html(size => $_->{name})))
+                gen_sample_data(size => $_->{name})))
         } @Bencher::ScenarioUtil::MojoDOM::datasets;
     },
     participants => [
